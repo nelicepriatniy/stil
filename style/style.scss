@@ -92,6 +92,7 @@ body, html {
     max-height: 0;
     overflow: hidden;
     transition: all .4s ease;
+    z-index: 9;
 }
 .header-drop-menu {
     display: flex;
