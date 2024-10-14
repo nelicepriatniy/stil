@@ -82,15 +82,26 @@ const headerBlockSlider = new Swiper('.header-block-slider', {
   autoplay: {
     delay: 5000,
   },
+  pagination: {
+    el: '.header-block-pagination',
+  }
 });
 
 const trandingSlider = new Swiper('.trending-slider', {
   speed: 400,
-  spaceBetween: 24,
-  slidesPerView: 4.5,
   navigation: {
     prevEl: '.trending-arrow-prev',
     nextEl: '.trending-arrow-next',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.3,
+      spaceBetween: 32,
+    },
+    1279: {
+      slidesPerView: 4.5,
+      spaceBetween: 24,
+    }
   }
 });
 
