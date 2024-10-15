@@ -218,11 +218,13 @@ body, html {
     margin-top: 12rem;
     border-radius: 24rem;
     padding: 40rem 64rem;
-    width: 100vw;
+    width: 1312rem;
     box-shadow: 0 3rem 10rem 0 rgba(0, 0, 0, 0.15);
     background: $white;
     transition: all .4s ease;
     visibility: hidden;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header-btm-search {
@@ -278,8 +280,33 @@ body, html {
     align-items: center;
     justify-content: center;
     height: calc(100% - 8rem);
+    &::after {
+        content: '';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(144deg, #c5127e 0%, #eb4c60 100%);
+        opacity: 0;
+        transition: all .4s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 200rem;
+        font-size: 16rem;
+        line-height: 130%;
+        color: $white;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
 }
 .header-btm-search-btn-loop {
+    z-index: 2;
+    position: relative;
     width: 20rem;
     height: 20rem;
 }
@@ -730,7 +757,8 @@ body, html {
     grid-template-columns: repeat(3, 1fr);
     gap: 24rem;
     @media(max-width: $mediaMiddle) {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 16rem;
     }
     @media(max-width: $mediaMobile) {
@@ -742,6 +770,10 @@ body, html {
     border-radius: 24rem;
     padding: 16rem;
     background: $white;
+    transition: all .4s ease; 
+    &:hover {
+        border: 1px solid #6b7280;
+    }
 }
 .exp-item-top {
     border-radius: 12rem;
@@ -1214,6 +1246,17 @@ body, html {
     font-size: 12rem;
 }
 
+@media(min-width: $mediaHd) {
+    body, html {
+        font-size: calc(100vw / 1920);
+    }
+}
+@media(min-width: $mediaMiddle) {
+    body, html {
+        font-size: calc(100vw / 1200);
+    }
+}
+
 @media(max-width: $mediaMiddle) {
     body, html {
         font-size: calc(100vw / 375);
@@ -1661,5 +1704,8 @@ body, html {
     .trending-item-img {
         max-height: 250rem;
         object-fit: cover;
+    }
+    .header-btm-list {
+        padding-bottom: 10rem;
     }
 }
