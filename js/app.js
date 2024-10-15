@@ -95,8 +95,8 @@ const trandingSlider = new Swiper('.trending-slider', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 1.3,
-      spaceBetween: 32,
+      slidesPerView: 1.6,
+      spaceBetween: 10,
     },
     1279: {
       slidesPerView: 4.5,
@@ -111,6 +111,7 @@ const expSlider = new Swiper('.exp-slider', {
   slidesPerView: 'auto',
   navigation: {
     nextEl: '.exp-arrow-next',
+    prevEl: '.exp-arrow-prev',
   }
 });
 
@@ -133,3 +134,13 @@ specSlider.on('slideChangeTransitionStart', ()=>{
   specHeading.innerHTML = heading;
   specText.innerHTML = text;
 })
+
+const upBtn = document.querySelector('.footer-btm-arrow-top-svg');
+if(upBtn){
+  upBtn.onclick = ()=>{
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+}
