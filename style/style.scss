@@ -772,7 +772,7 @@ body, html {
     background: $white;
     transition: all .4s ease; 
     &:hover {
-        border: 1px solid #6b7280;
+        border: 1rem solid #6b7280;
     }
 }
 .exp-item-top {
@@ -1246,15 +1246,240 @@ body, html {
     font-size: 12rem;
 }
 
+.header-btm-item-btm {
+    padding: 40rem 64rem;
+}
+.header-btm-item-wrapper {
+
+}
+.header-btm-item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 240rem);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20rem;
+}
+.header-btm-item-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+}
+.heade-btm-item-heading {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+.header-btm-item-list-item-heading-svg {
+    width: 18rem;
+    height: 18rem;
+}
+.header-btm-item-list-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+.header-btm-item-heading-text {
+    font-weight: 700;
+    font-size: 14rem;
+    line-height: 130%;
+    color: #2e2e2e;
+}
+.header-btm-item-item {
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 130%;
+    color: #2e2e2e;
+}
+
+.bred-path {
+    padding: 20rem 0;
+    margin-top: 88rem;
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+    }
+}
+.bred-path-home, .bred-path-item {
+    font-weight: 600;
+    font-size: 14rem;
+    line-height: 130%;
+    text-align: center;
+    color: $text-primary;
+}
+.bred-path-arr {
+    width: 7rem;
+    height: 12rem;
+}
+.bred-path-item {
+    color: $gray;
+}
+
+.service-heading {
+    padding: 64rem 0;
+    position: relative;
+    z-index: 2;
+    .header-btm-search {
+        width: 100%;
+        height: 64rem;
+        &::after {
+            display: none;
+        }
+    }
+    .header-btm-search-loop {
+    }
+    .header-btm-search-inp {
+        height: 64rem;
+    }
+    .header-search-btn {
+        width: 140rem;
+    }
+    .header-btm-search-btn-loop {
+    }
+}
+.container {
+}
+.services-heading-text {
+    font-weight: 600;
+    font-size: 56rem;
+    line-height: 116%;
+    letter-spacing: -0.05em;
+    color: $text-primary;
+    margin-bottom: 48rem;
+}
+.service-heading-filters {
+    display: flex;
+    align-items: center;
+    gap: 24rem;
+}
+.services-category {
+    position: relative;
+    &:hover {
+        .service-category-btm {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+.services-category-top {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    border: 1rem solid $gray-1;
+    border-radius: 100rem;
+    padding: 8rem 40rem;
+    width: 201rem;
+    height: 64rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services-category-top-text {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 130%;
+    color: $text-primary;
+}
+.services-category-top-svg {
+    width: 20rem;
+    height: 20rem;
+    flex-shrink: 0;
+}
+.service-category-btm {
+    position: absolute;
+    border-radius: 16rem;
+    box-shadow: 0 4rem 6rem 0 rgba(0, 0, 0, 0.05), 0 10rem 15rem -3rem rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 4rem 0rem;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 15rem;
+    transition: all .4s ease;
+}
+.service-category-btm-item {
+    padding: 16rem;
+    width: 201rem;
+    height: 50rem;
+    font-weight: 400;
+    font-size: 14rem;
+    line-height: 130%;
+    &:hover {
+        span {
+            background: linear-gradient(144deg, #c5127e 0%, #eb4c60 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
+
+    }
+    span {
+        background: #374151;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: $font-family;
+    }
+
+}
+
+.service-wrapper {
+    .exp-items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .exp-item-buttons {
+        flex-direction: column;
+    }
+    .exp-item-button-popup {
+        width: 100%;
+    }
+    .exp-item-button-more {
+        display: 100%;
+        justify-content: center;
+    }
+}
+.container {
+}
+.exp-wrapper {
+}
+.exp-item {
+}
+.exp-item-top {
+}
+.exp-item-new {
+}
+.exp-item-img {
+}
+.exp-item-info {
+}
+.exp-item-info-heading {
+}
+.exp-item-info-text {
+}
+.exp-item-buttons {
+}
+.exp-item-button-popup {
+}
+.exp-item-button-more {
+}
+.arr-btn {
+}
+.arr-btn-text {
+}
+.arr-btn-svg {
+}
+
+.trending.service {
+    .section-heading {
+        text-align: left;
+    }
+}
+
 @media(min-width: $mediaHd) {
     body, html {
         font-size: calc(100vw / 1920);
     }
 }
 @media(min-width: $mediaMiddle) {
-    body, html {
-        font-size: calc(100vw / 1200);
-    }
 }
 
 @media(max-width: $mediaMiddle) {
@@ -1707,5 +1932,67 @@ body, html {
     }
     .header-btm-list {
         padding-bottom: 10rem;
+    }
+    .service-wrapper .exp-items {
+        grid-template-columns: 1fr;
+    }
+    .service-heading-filters {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        flex-wrap: wrap;
+        gap: 8rem;
+    }
+    .services-category {
+        width: 100%;
+
+    }
+    .header-btm-search {
+
+    }
+    .services-category-top {
+        width: 167rem;
+    }
+    .services-category-top {
+        padding: 8rem 12rem;
+        font-size: 14rem;
+        line-height: 130%;
+        height: fit-content;
+
+    }
+    .services-category-top-text {
+        & span {
+            font-size: 14rem;
+            line-height: 130%;
+        }
+
+
+    }
+    .services-category-top-svg {
+
+    }
+    .service-category-btm {
+        width: 100%;
+    }
+    .service-category-btm-item {
+        width: 100%;
+    }
+    .serv-mob-flex {
+        display: flex;
+        gap: 8rem;
+    }
+    .service-heading .header-btm-search-inp {
+        height: fit-content;
+    }
+    .service-heading .header-btm-search {
+        height: fit-content;
+    }
+    .service-heading .header-search-btn {
+        width: 60rem;
+    }
+    .services-heading-text {
+        font-size: 22rem;
+        line-height: 136%;
+        letter-spacing: -0.07em;
+        margin-bottom: 12rem;
     }
 }
